@@ -15,6 +15,13 @@
     <meta name="author" content="PPType" />
     <meta name="theme-color" content="#ffffff" />
     <title>Passport Test</title>
+    <style>
+        
+
+  .column {
+    max-width: 450px;
+  }
+    </style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
@@ -51,18 +58,73 @@
         </div>
       </div>
     </div>
-    <div class="ui center aligned text container">
-      <h1 class="ui huge header">Semantic-UI starter template</h1>
-      <p class="lead">
-        Use this document as a way to quickly start any new project.
-      </p>
-      <p class="lead">
-        All you get is this text and a mostly barebones HTML document.
-      </p>
-    </div>
-
+    
+    <div class="ui middle aligned center aligned grid">
+        <div class="column">
+          <h2 class="ui teal center aligned header">
+            <img class="image" src="/images/logo.png" /> Log-in to your
+            account
+          </h2>
+          <form class="ui large form">
+            <div class="ui stacked segment">
+              <div class="field">
+                <div class="ui left icon input">
+                  <i class="user icon"></i>
+                  <input name="email" placeholder="E-mail address" type="text" />
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui left icon input">
+                  <i class="lock icon"></i>
+                  <input name="password" placeholder="Password" type="password" />
+                </div>
+              </div>
+              <div class="ui fluid large teal submit button">Login</div>
+            </div>
+            <div class="ui error message"></div>
+          </form>
+          <div class="ui message">New to us?<a href="#root"> Sign Up</a></div>
+        </div>
+      </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/login.js">  </script> 
     <script src="/js/start.js"></script>
+
+<script>
+    $(document).ready(function () {
+  $(".ui.form").form({
+    fields: {
+      email: {
+        identifier: "email",
+        rules: [
+          {
+            type: "empty",
+            prompt: "Please enter your e-mail",
+          },
+          {
+            type: "email",
+            prompt: "Please enter a valid e-mail",
+          },
+        ],
+      },
+      password: {
+        identifier: "password",
+        rules: [
+          {
+            type: "empty",
+            prompt: "Please enter your password",
+          },
+          {
+            type: "length[6]",
+            prompt: "Your password must be at least 6 characters",
+          },
+        ],
+      },
+    },
+  });
+});
+
+</script>
   </body>
 </html>

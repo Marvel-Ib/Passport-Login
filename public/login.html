@@ -20,21 +20,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
       type="text/css"
     />
-    <style type="text/css">
-      body {
-        background-color: #dadada;
-        -webkit-font-smoothing: antialiased;
-        -moz-font-smoothing: grayscale;
-      }
-
-      body > .ui.grid {
-        height: 100%;
-      }
-
-      .column {
-        max-width: 450px;
-      }
-    </style>
+    <link href="/css/login.css"
   </head>
 
   <body id="root">
@@ -67,39 +53,8 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $(".ui.form").form({
-          fields: {
-            email: {
-              identifier: "email",
-              rules: [
-                {
-                  type: "empty",
-                  prompt: "Please enter your e-mail"
-                },
-                {
-                  type: "email",
-                  prompt: "Please enter a valid e-mail"
-                }
-              ]
-            },
-            password: {
-              identifier: "password",
-              rules: [
-                {
-                  type: "empty",
-                  prompt: "Please enter your password"
-                },
-                {
-                  type: "length[6]",
-                  prompt: "Your password must be at least 6 characters"
-                }
-              ]
-            }
-          }
-        });
-      });
+ 
+    
     </script>
   </body>
 </html>
