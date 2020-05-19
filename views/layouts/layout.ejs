@@ -28,9 +28,11 @@
       <div class="ui borderless fluid huge inverted menu">
         <div class="ui container">
           <a class="header item" href="/">Project Name</a>
-          <a class="active item" href="/">Home</a>
-          <a class="item" href="/about">About</a>
-          <a class="item" href="/contact">Contact</a>
+          <a class="<%= act === 'home' ? 'active' : '' %> item"  href="/">Home</a>
+          <a class="<%= act === 'about' ? 'active' : '' %> item"  href="/about">About</a>
+          <a class="<%= act === 'contact' ? 'active' : '' %> item" href="/contact">Contact</a>
+          <a class="<%= act === 'login' ? 'active' : '' %> item" href="/auth/login">Login</a>
+          <a class=" item" href="/auth/logout">Logout</a>
         </div>
       </div>
     </div>
@@ -45,9 +47,11 @@
           </div>
         </div>
         <div class="ui vertical borderless fluid inverted menu">
-          <a class="active item" href="/">Home</a>
-          <a class="item" href="/about">About</a>
-          <a class="item" href="/contact">Contact</a>
+          <a class="<%= act === 'home' ? 'active' : '' %> item"  href="/">Home</a>
+          <a class="<%= act === 'about' ? 'active' : '' %> item"  href="/about">About</a>
+          <a class="<%= act === 'contact' ? 'active' : '' %> item" href="/contact">Contact</a>
+          <a class="<%= act === 'login' ? 'active' : '' %> item" href="/auth/login">Login</a>
+          <a class=" item" href="/auth/logout">Logout</a>
         </div>
       </div>
     </div>

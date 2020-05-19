@@ -1,37 +1,43 @@
-<br>
-<button class="fluid ui google plus button">
-    <i class="google plus icon"></i>
-  Sign in with  Google Plus
-  </button>
-  <h1>OR</h1>
-<body id="root">
-    <div class="ui middle aligned center aligned grid">
-      <div class="column">
-        <h2 class="ui teal center aligned header">
-          <img class="image" src="/images/logo.png" /> Log-in to your
-          account
-        </h2>
-        <form class="ui large form">
-          <div class="ui stacked segment">
-            <div class="field">
-              <div class="ui left icon input">
-                <i class="user icon"></i>
-                <input name="email" placeholder="E-mail address" type="text" />
-              </div>
-            </div>
-            <div class="field">
-              <div class="ui left icon input">
-                <i class="lock icon"></i>
-                <input name="password" placeholder="Password" type="password" />
-              </div>
-            </div>
-            <div class="ui fluid large teal submit button">Login</div>
-          </div>
-          <div class="ui error message"></div>
-        </form>
-        <div class="ui message">New to us?<a href="#root"> Sign Up</a></div>
+
+<div class="ui center aligned basic segment">
+    <div class="ui  form">
+    <div class="field">
+      <label>Username</label>
+      <div class="ui left icon input">
+        <input type="text" placeholder="Username">
+        <i class="user icon"></i>
       </div>
     </div>
-    
- 
+    <div class="field">
+      <label>Password</label>
+      <div class="ui left icon input">
+        <input type="password">
+        <i class="lock icon"></i>
+      </div>
+    </div>
+    <div class="ui blue submit button">Login</div>
+  </div>
 
+  <div class="ui horizontal divider">
+    Or
+  </div>
+  <div class="middle aligned column">
+    <a href="/auth/google">
+    <button class="ui google plus button" >
+      <i class="google plus icon"></i>
+    Sign in with  Google 
+    </button></a>
+  </div>
+
+  <div class="ui horizontal divider">
+    Or
+  </div>
+  <a href="/auth/signup">
+    <div class="ui teal labeled icon button" >
+      Sign up 
+      <i class="add icon"></i>
+    </div>
+  </a>
+  
+  
+</div>
