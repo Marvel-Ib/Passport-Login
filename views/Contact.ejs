@@ -1,20 +1,26 @@
 <div class="ui center aligned text container">
-    <h1 class="ui huge header"> starter template</h1>
+  <% if(use){ %>
+  <h1 class="ui huge header"> Thank you for visiting </h1>
     <p class="lead">
-      only contact us if you are logged in
-    you can log in here
+      Contact:-backendlifetech@gmail.com
     </p>
-    <p class="lead">
-        cool 
-    </p>
+  
+    <%}%>
 
+
+<% if (!use) {%>
     <div class="ui warning message">
       <i class="close icon"></i>
       <div class="header">
-        You must register before you can do that!
+        You must Login before you can view this paage!
       </div>
-      Visit our registration page, then try again
+      Visit our Login page, then try again
     </div>
+    <a href="/auth/login">
+      <button class="ui button" >
+      Login
+      </button></a>
+  <% } %>
 
 
     <i class='ng flag'></i>

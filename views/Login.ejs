@@ -1,22 +1,21 @@
 
 <div class="ui center aligned basic segment">
-    <div class="ui  form">
+
+  <form class="ui form attached fluid segment" method="POST" action="/auth/login">
+    <% if (ers) {%>
+      <div class="ui red message">username or password invalid</div>
+      <%}%>
     <div class="field">
       <label>Username</label>
-      <div class="ui left icon input">
-        <input type="text" placeholder="Username">
-        <i class="user icon"></i>
-      </div>
+      <input placeholder="Username" name="username" type="text" required>
     </div>
     <div class="field">
       <label>Password</label>
-      <div class="ui left icon input">
-        <input type="password">
-        <i class="lock icon"></i>
-      </div>
+      <input type="password" name="password" placeholder="Password" required>
     </div>
-    <div class="ui blue submit button">Login</div>
-  </div>
+    <button class="ui button">Submit</button>
+  </form>
+  
 
   <div class="ui horizontal divider">
     Or

@@ -1,10 +1,22 @@
 <div class="ui center aligned text container">
-    <h1 class="ui huge header"> starter template</h1>
+  <% if (use) {%>
+  <h1 class="ui huge header">Welcome</h1>
     <p class="lead">
-      Welcome you are currently logged in Name of person
-    you can log out here
+You are currently logged in as:<%=use.name %>
     </p>
-    <p class="lead">
-      you are not currently logged in you  can log out here 
-    </p>
+<%} else{%>
+  <div class="ui warning message">
+    <i class="close icon"></i>
+    <div class="header">
+      You must Login before you can view this paage!
+    </div>
+    Visit our Login page, then try again
+  </div>
+    <a href="/auth/login">
+      <button class="ui button" >
+      Login
+      </button></a>
+<%}%>
+
+
   </div>

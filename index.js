@@ -14,7 +14,7 @@ app.set("view engine", "ejs");
 app.set("layout", "layouts/layout");
 app.use(expressLayouts);
 app.use(express.static("public"));
-
+app.use(express.urlencoded({ extended: true }));
 //passsport config
 require("./passport/pass");
 
@@ -31,11 +31,22 @@ app.use(passport.session());
 //database
 require("./models/connect");
 
+//global scope
+app.use((req, res, next) => {
+  res.locals.use = req.user;
+
+  next();
+});
+
 app.get("/", (req, res) => {
   res.render("home", { act: "home" });
 });
 app.use(readRoute);
 app.use("/auth", authRoute);
+
+app.use((req, res) => {
+  res.render("404", { act: "how far" });
+});
 
 app.listen(PORT, () => {
   console.log("listening");
