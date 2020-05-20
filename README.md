@@ -2,7 +2,7 @@
 
 Node.js app made with Express that uses  Passport Js, Semantic Ui and Mongoose 
 
-### A simple app that allows you to login using a username and password and sign in with Google
+### A simple app that allows you to login using a username and password or sign in with Google
 ### I achieved the folllowing
 * Used Passport for local authentication
 * Used Passport for Google OAUTH 
