@@ -12,7 +12,7 @@ Node.js app made with Express that uses  Passport Js, Semantic Ui and Mongoose
 Node app deployed and ran on Glitch, 
 
 ## click the link below to see the live app 
-# [click](https://marvel-auth.glitch.me/)
+# [click](https://marvel-authentication-app.herokuapp.com/)
 
 # Usage
 ## Installation
